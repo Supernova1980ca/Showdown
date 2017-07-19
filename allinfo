@@ -1,0 +1,14 @@
+<?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Max-Age: 1000');
+if ($_POST) {
+    $data_html = $_POST['data_html'];
+    $data_simple = $_POST['data_simple'];
+    $url = $_POST['url'];
+    $province = $_POST['prov'];
+    $key = $_POST['shwdwn'];
+    $example_array = array($url,$province,$key);
+    echo json_encode(array('success'=>true));
+}
+?>
